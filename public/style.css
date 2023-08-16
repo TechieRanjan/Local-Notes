@@ -1,0 +1,295 @@
+
+      @import url("//fonts.googleapis.com/css?family=Google+Sans:400,500,600,700");
+      @import url("//fonts.googleapis.com/css?family=Roboto+Mono:400,500");
+      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Google Sans", Helvetica, Arial, sans-serif;
+        scroll-behavior: smooth;
+        /* border: 1px solid red; */
+      }
+
+      body {
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+        min-height: 100vh;
+        position: relative;
+        /* background-color: black; */
+  
+      }
+
+
+      nav {
+        position: fixed;
+        width: 70px;
+        height: 100%;
+        border-right: 1px solid gainsboro;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding-top: 10px;
+      }
+      #add {
+        padding: 10px;
+      background-color: deeppink;
+        color:white;
+        font-weight: bold;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      main {
+        margin-left: 85px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      main header {
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+      }
+      main header .searchBox {
+  border: 1px solid gainsboro;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 27px;
+        width: 80%;
+     /* outline: 2px solid gray; */
+      }
+      main header .searchBox i {
+        padding: 10px;
+        padding-right: 0;
+      }
+      main header .searchBox input {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        background-color: transparent;
+        color: white;
+       
+      }
+   
+      main .notes {
+        height: 100%;
+        border-radius: 10px;
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      main .notes .note {
+       
+       border: 1px solid gray;
+  
+        width: 250px;
+        height: 230px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .note .content {
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        overflow-y: auto;
+        padding-bottom: 10px;
+      }
+      .note .content::-webkit-scrollbar {
+        display: none;
+      }
+      .note #date {
+        font-size: 13px;
+        color: #eff3ff;
+      
+      }
+
+      main .notes .note .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color:deeppink;
+      }
+
+      main .notes .note .footer i {
+        font-size: 17px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #6044ff; */
+        border-radius: 50%;
+        color: #eff3ff;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      main .notes .note .footer i:hover {
+        transform: scale(1.3);
+      }
+      dialog::backdrop {
+        background-color: #0101017f;
+      }
+      dialog {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        outline: none;
+        width: 90%;
+        max-width: 500px;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+    
+      dialog h3 {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: deeppink;
+        color: white;
+      }
+      dialog .wrapper {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      dialog .wrapper .wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      dialog .wrapper .wrap input {
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 4px;
+        outline: none;
+        font-size: 17px;
+      }
+      dialog .wrapper .wrap textarea {
+        border: 1px solid gray;
+        resize: none;
+        padding: 10px;
+        height: 120px;
+        outline: none;
+        border-radius: 4px;
+      }
+      .wr {
+        display: flex;
+        gap: 5px;
+      }
+      i {
+        cursor: pointer;
+      }
+      dialog .wrapper button {
+        padding: 10px;
+        border: none;
+        font-size: 18px;
+        border-radius: 4px;
+        background-color: deeppink;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .addBtn {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        display: none;
+        
+      }
+      .note p{
+        font-size: 13px;
+      
+      }
+      #model2 {
+        padding: 20px;
+      }
+      #model2 p {
+        font-size: 13px;
+        margin: 20px 0;
+      }
+      #model2 .confirmBtn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+      }
+      #model2 .confirmBtn button {
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        font-weight: bold;
+        font-size: 17px;
+        color: deeppink;
+        cursor: pointer;
+      }
+      .totalNotes{
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: deeppink;
+        padding: 10px;
+        color:white;
+        border-radius: 27px;
+      }
+
+      @media (width<=500px) {
+        nav {
+          display: none;
+        }
+        main {
+          width: 95%;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+        }
+        main .notes {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+        .addBtn {
+          display: block;
+        }
+        main header{
+          width: 90%;
+        }
+        main header .searchBox {
+          width: 100%;
+        }
+        main .notes .note{
+        
+          width: 300px;
+      
+          
+       
+        }
+      }
+  

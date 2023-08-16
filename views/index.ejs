@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      
+    <meta property="og:description" content="A notes website developed by Ranjan">
+    <meta property="og:url" content="https://local-notes.ranjankashyap1.repl.co">
+    <meta property="og:type" content="website">
+      <link rel="image_src" href="https://i.ibb.co/K7t3tRS/icon-1.png">
+
+ <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/K7t3tRS/icon-1.png">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <title>Notes</title>
+  
+  </head>
+  <body>
+    <nav>
+      <i id="add" class="material-icons">add</i>
+    </nav>
+    <main>
+      <header>
+        <div class="head">
+          <h2>Notes</h2>
+        </div>
+        <div class="searchBox">
+          <i class="material-icons">search</i>
+          <input id="search" type="text" placeholder="Search" />
+        </div>
+        <div id="root"></div>
+        <!-- <div class="addBtn">
+          <i onclick="OpenModel()" id="add" class="material-icons">add</i>
+        </div> -->
+      </header>
+      <section class="notes">
+        <div class="note">
+          <div class="content">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+              doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, a.
+            </p>
+          </div>
+          <div class="footer">
+            <span>10 Aug 23</span>
+            <div class="wr">
+              <i class="material-icons">delete</i>
+              <i class="material-icons">edit</i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <dialog id="model1">
+      <h3>
+        <span id="addTitle">Add note</span>
+        <i onclick="CloseModel()" class="material-icons">close</i>
+      </h3>
+      <form action="#" class="wrapper">
+        <div class="wrap">
+          <label for="">Title</label>
+          <input id="inputTitle" autocomplete="off" type="text" required />
+        </div>
+        <div class="wrap">
+          <label for="">Description</label>
+          <textarea required id="inputDescription"></textarea>
+        </div>
+        <button type="submit" id="savebtn" >Save</button>
+      </form>
+    </dialog>
+    <dialog id="model2">
+      <h2>Delete Note</h2>
+      <p>
+        You'll no longer see this note here. click Confirm if yo are sure
+        otherwise cancel it.
+      </p>
+      <div class="confirmBtn">
+        <button id="no">Cancel</button>
+        <button id="yes">Confirm</button>
+      </div>
+    </dialog>
+<div class="totalNotes">
+  <span>  Notes created</span>
+  <span id="count"></span>
+</div>
+    <script src="https://cdn.ranjankashyap1.repl.co/profile.js"></script>
+  <script>
+    new profile("#root");
+  </script>
+ <script src="script.js"></script>
+  </body>
+</html>
